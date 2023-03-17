@@ -3,7 +3,7 @@
 /**
  * main-Entry point
  *  Use AASCII Hex Symbol
- * return : 0
+ * return: 0 on success
  */
 int main(void)
 {
