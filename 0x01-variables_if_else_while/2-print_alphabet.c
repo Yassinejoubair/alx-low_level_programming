@@ -1,20 +1,18 @@
 #include<stdlib.h>
 #include<stdio.h>
 /**
- * main- Entry point
+ * main - Entry point
  *
- * Return : 0 on success
+ * Return: 0 on success
  */
 int main(void)
 {
 	char alphab;
 
-	for (alphab = 'a'; alphab < 'z'; alphab++)
+	for (alphab = 'a'; alphab <= 'z'; alphab++)
 	{
 		putchar(alphab);
 	}
-	
 	putchar('\n');
-	
-	return(0);
+	return (0);
 }
