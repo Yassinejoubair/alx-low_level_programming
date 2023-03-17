@@ -3,7 +3,7 @@
 /**
  * main 
  * Use AASCII Hex Symbol
- *  return : 0
+ * return : 0
  **/
 int main(void)
 {
