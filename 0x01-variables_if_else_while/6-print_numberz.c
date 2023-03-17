@@ -1,11 +1,10 @@
 #include<stdlib.h>
 #include<stdio.h>
 /**
- * main-Entry point 
- * Use AASCII Hex Symbol
+ * main-Entry point
+ *  Use AASCII Hex Symbol
  * return : 0
  */
-
 int main(void)
 {
 	int i;
@@ -16,7 +15,6 @@ int main(void)
 	}
 
 	putchar ('\n');
-
 	return (0);
 }
 
