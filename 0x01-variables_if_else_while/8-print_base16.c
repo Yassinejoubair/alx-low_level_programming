@@ -2,8 +2,8 @@
 #include<stdio.h>
 /**
  * main - Entry point
- *    
- * Return : 0 On Succes
+ *  
+ * Return: 0 On Succes
  */
 int main(void)
 	{
