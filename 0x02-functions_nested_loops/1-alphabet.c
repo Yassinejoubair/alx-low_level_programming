@@ -2,7 +2,7 @@
 /*
  * main - prints the alphabets
  *
- * 
+ * Return:0 on success
  */
 void print_alphabet(void)
 {
