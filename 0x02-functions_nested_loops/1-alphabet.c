@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  *
- * Return:0 on success
+ * Return : 0 on success
  */
 void print_alphabet(void)
 {
