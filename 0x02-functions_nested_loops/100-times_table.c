@@ -21,7 +21,9 @@ void print_times_table(int n)
 				a = c * b;
 
 			if (a <= 9)
+			{
 				_putchar(' ');
+			}
 			if (a <= 99)
 			{
 				_putchar(' ');
@@ -30,9 +32,12 @@ void print_times_table(int n)
 			{
 				_putchar((a / 100) + 48);
 				_putchar((a / 10) % 10 + 48);
-			}else if (a <= 99 && a >= 10)
+			}
+			else if (a <= 99 && a >= 10)
+			{
 				_putchar((a / 10) + 48);
 				_putchar((a % 10) + 48);
+			}
 			}
 			_putchar('\n');
 		}
