@@ -8,6 +8,7 @@ int main(void)
 {
 	int count;
 	unsigned long a1 = 0, a2 = 1, sum;
+
 	for (count = 0; count < 50; count++)
 	{
 		sum = a1 + a2;
@@ -24,5 +25,5 @@ int main(void)
 			printf(", ");
 		}
 	}
-	return (0)
+	return (0);
 }
