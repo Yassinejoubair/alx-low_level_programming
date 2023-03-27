@@ -11,6 +11,7 @@ int main(void)
 	int s;
 	char c;
 
+	printf("Tada! Congrats \n:");
 	srand(time(NULL));
 	while (s <= 2645)
 	{
