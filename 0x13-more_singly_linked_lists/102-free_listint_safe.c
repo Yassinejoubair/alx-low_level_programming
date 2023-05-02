@@ -1,46 +1,46 @@
 #include "lists.h"
-
-size_t looped(listint_t *head);
+#include <stdlib.h>
+size_t looped_listint_count(listint_t *head);
 size_t free_listint_safe(listint_t **h);
 
 /**
- * looped - Counts the number of unique nodes
- * in a looped listint_t linked list.
+ * looped_listint_count - Counts the number of unique nodes
+ *                      in a looped listint_t linked list.
  * @head: A pointer to the head of the listint_t to check.
  *
  * Return: If the list is not looped - 0.
  *         Otherwise - the number of unique nodes in the list.
  */
-size_t looped(listint_t *head)
+size_t looped_listint_count(listint_t *head)
 {
-	listint_t *tp, *he;
-	size_t nod = 1;
+	listint_t *t, *h;
+	size_t nodes = 1;
 
 	if (head == NULL || head->next == NULL)
 		return (0);
 	t = head->next;
 	h = (head->next)->next;
-	while (he)
+	while (h)
 	{
-		if (tp == h)
+		if (t == h)
 		{
-			tp = he;
-			while (tp != he)
+			t = head;
+			while (t != h)
 			{
-				nod++;
-				tp = tp->next;
-				he = he->next;
+				nodes++;
+				t = t->next;
+				h = h->next;
 			}
-			tp = tp->next;
-			while (tp != he)
+			t = t->next;
+			while (t != h)
 			{
-				node++;
-				tp = tp->next;
+				nodes++;
+				t = t->next;
 			}
-			return (nod);
+			return (nodes);
 		}
-		tp = tp->next;
-		he = (he->next)->next;
+		t = t->next;
+		h = (h->next)->next;
 	}
 	return (0);
 }
@@ -57,30 +57,30 @@ size_t looped(listint_t *head)
  */
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *tp;
-	size_t nod, ind;
+	listint_t *tmp;
+	size_t nodes, index;
 
-	nod = looped(*h);
-	if (nod == 0)
+	nodes = looped_listint_count(*h);
+	if (nodes == 0)
 	{
-		for (; h != NULL && *h != NULL; nod++)
+		for (; h != NULL && *h != NULL; nodes++)
 		{
-			tp = (*h)->next;
+			tmp = (*h)->next;
 			free(*h);
-			*h = tp;
+			*h = tmp;
 		}
 	}
 	else
 	{
-		for (ind = 0; ind < nod; ind++)
+		for (index = 0; index < nodes; index++)
 		{
-			tp = (*h)->next;
+			tmp = (*h)->next;
 			free(*h);
-			*h = tp;
+			*h = tmp;
 		}
 
 		*h = NULL;
 	}
 	h = NULL;
-	return (nod);
+	return (nodes);
 }
